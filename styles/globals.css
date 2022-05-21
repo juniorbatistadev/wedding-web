@@ -1,8 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Birthstone&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Birthstone&family=Bona+Nova&display=swap');
+@import "~react-image-gallery/styles/css/image-gallery.css";
+
 html,
 body {
+  background-color: #F8FFF0;
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  font-family:Bona Nova, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
@@ -13,4 +18,22 @@ a {
 
 * {
   box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+
+:root{
+  --accent-color: #571F31;
+}
+
+/* overide styles for slider */
+.image-gallery-left-nav .image-gallery-svg{
+  width: 20px !important;
+}
+.image-gallery-left-nav .image-gallery-svg:hover{
+  width: 20px !important;
+}
+
+.image-gallery-right-nav .image-gallery-svg {
+  width: 20px !important;
 }

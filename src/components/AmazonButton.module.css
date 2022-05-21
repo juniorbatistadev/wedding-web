@@ -1,0 +1,20 @@
+.button{
+    padding: 0.7rem;
+    border: none;
+    background-color:rgb(215, 215, 215) ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(43, 43, 43);
+    margin-top: 0.7rem;
+
+}
+
+.button img{
+    width: 20px;
+}
+
+
+.button span{
+    margin-left: 0.5rem;
+}

@@ -1,0 +1,19 @@
+.button{
+    padding: 0.7rem;
+    border: none;
+    background-color:#fff ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(0, 0, 0);
+    margin-top: 0.7rem;
+    border: solid 1px black;
+}
+
+.button img{
+    width: 20px;
+}
+
+.button span{
+    margin-left: 0.5rem;
+}
