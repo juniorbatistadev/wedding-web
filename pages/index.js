@@ -116,7 +116,7 @@ export default function Home({ data }) {
 
 async function getAuthToken() {
   const { privateKey } = JSON.parse(
-    process.env.GOOGLE_PRIVATE_KEY || "{ privateKey: null }"
+    process.env.GOOGLE_PRIVATE_KEY || `{ "privateKey": null }`
   );
 
   const SCOPES = ["https://www.googleapis.com/auth/spreadsheets.readonly"];
