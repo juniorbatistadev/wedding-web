@@ -4,7 +4,7 @@ import styles from "./TargetButton.module.css";
 
 export default function TargetButton({ link }) {
   return (
-    <a className={styles.button} href={link} target="_blank">
+    <a className={styles.button} href={link} target="_blank" rel="noreferrer">
       <img src={targetImage.src} /> <span>Get On Target</span>
     </a>
   );

@@ -37,7 +37,7 @@ export default function Product({ data }) {
 
   const handleClick = async () => {
     const { value: formValues } = await MySwal.fire({
-      title: <p>Mark "{name}" as bought.</p>,
+      title: <p>Mark &quot;`{name}&quot;` as bought.</p>,
       html:
         '<input id="swal-input1" class="swal2-input" placeholder="Your name" type="text">' +
         '<input id="swal-input2" class="swal2-input" placeholder="Your email" type="email">',
