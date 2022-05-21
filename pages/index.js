@@ -114,10 +114,30 @@ export default function Home({ data }) {
   );
 }
 
-export async function getServerSideProps() {
-  const auth = await google.auth.getClient({
-    scopes: ["https://www.googleapis.com/auth/spreadsheets.readonly"],
+async function getAuthToken() {
+  const { privateKey } = JSON.parse(
+    process.env.GOOGLE_PRIVATE_KEY || "{ privateKey: null }"
+  );
+
+  const SCOPES = ["https://www.googleapis.com/auth/spreadsheets.readonly"];
+
+  const auth = new google.auth.GoogleAuth({
+    scopes: SCOPES,
+    projectId: process.env.GOOGLE_PROJECTID,
+    credentials: {
+      private_key: privateKey,
+      client_email: process.env.GOOGLE_CLIENT_EMAIL,
+    },
   });
+
+  console.log(auth);
+
+  const authToken = await auth.getClient();
+  return authToken;
+}
+
+export async function getServerSideProps() {
+  const auth = await getAuthToken();
 
   const sheets = google.sheets({ version: "v4", auth });
   const range = `Sheet1!2:200`;
