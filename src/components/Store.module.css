@@ -5,6 +5,7 @@
     margin-top: 3rem;
     border-radius: 0.3rem;
     transition: transform 0.3s;
+    background: #fff;
 }
 
 .container:hover{

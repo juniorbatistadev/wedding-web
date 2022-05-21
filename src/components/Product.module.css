@@ -1,12 +1,14 @@
 .container{
     box-shadow: 0px 0px 20px 8px #d0d0d06e;
     padding: 2rem;
-    /* min-width: 400px; */
+    border-radius: 0.5rem;
+    background: #fff;
 }
 
 .name{
     color: var(--accent-color);
     margin: 1.5rem 0rem;
+    font-weight: 700;
 }
 
 .description{
@@ -24,4 +26,8 @@
     border: none;
     background-color: var(--accent-color);
     color: #fff;
+}
+
+.optionsText{
+    font-weight: 700;
 }

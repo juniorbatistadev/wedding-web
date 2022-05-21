@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Birthstone&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Birthstone&family=Bona+Nova&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Birthstone&family=Bona+Nova:wght@400;700&display=swap');
 @import "~react-image-gallery/styles/css/image-gallery.css";
 
 html,
@@ -24,6 +23,7 @@ a {
 
 :root{
   --accent-color: #571F31;
+  --highlight-color:#bb3e65;
 }
 
 /* overide styles for slider */
