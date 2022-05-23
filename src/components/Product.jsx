@@ -89,7 +89,12 @@ export default function Product({ data }) {
       </div>
       <h2 className={styles.name}>{name}</h2>
       <p className={styles.description}>{description}</p>
-      <p className={styles.optionsText}>Options We Like:</p>
+      {(amazonLink ||
+        amazonLink2 ||
+        targetLink ||
+        targetLink2 ||
+        otherLink ||
+        otherLink2) && <p className={styles.optionsText}>Options We Like:</p>}
       <div className={styles.buttons}>
         {amazonLink && <AmazonButton link={amazonLink} />}
         {amazonLink2 && <AmazonButton link={amazonLink2} />}
