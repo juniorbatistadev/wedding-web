@@ -1,6 +1,24 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import { google } from "googleapis";
 
+async function getAuthToken() {
+  const { privateKey } = JSON.parse(process.env.GOOGLE_PRIVATE_KEY);
+
+  const SCOPES = ["https://www.googleapis.com/auth/spreadsheets"];
+
+  const auth = new google.auth.GoogleAuth({
+    scopes: SCOPES,
+    projectId: process.env.GOOGLE_PROJECTID,
+    credentials: {
+      private_key: privateKey,
+      client_email: process.env.GOOGLE_CLIENT_EMAIL,
+    },
+  });
+
+  const authToken = await auth.getClient();
+  return authToken;
+}
+
 export default async function handler(req, res) {
   const { row, name, email } = req.query;
 
@@ -13,9 +31,7 @@ export default async function handler(req, res) {
     return;
   }
 
-  const auth = await google.auth.getClient({
-    scopes: ["https://www.googleapis.com/auth/spreadsheets"],
-  });
+  const auth = await getAuthToken();
 
   const sheets = google.sheets({ version: "v4", auth });
 
