@@ -29,5 +29,6 @@
 }
 
 .optionsText{
-    font-weight: 700;
+    /* font-weight: 700; */
+    font-size: 1rem;
 }
