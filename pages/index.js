@@ -59,17 +59,6 @@ export default function Home({ data }) {
           >
             Stores We Like
           </li>
-          <li
-            onClick={() => handleChange("others")}
-            style={{
-              color:
-                currentPage === "others"
-                  ? "var(--highlight-color)"
-                  : "var(--accent-color)",
-            }}
-          >
-            OTHERS
-          </li>
         </ul>
         <div className={styles.content}>
           {currentPage === "home" && (
